@@ -46,7 +46,6 @@ export const updateProductInCart = async (request, response) => {
 
 export const addProductInCart = async (request, response) => {
   const { cid, pid } = request.params;
-  console.log({ cid, pid });
   let res = await cartServices.addProductInCart(cid, pid);
   res?.error
     ? response.status(400).send({ ...res })

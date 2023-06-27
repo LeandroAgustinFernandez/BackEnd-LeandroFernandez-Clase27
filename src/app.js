@@ -1,6 +1,6 @@
 // ? Utils config
 import { __dirname, PORT } from "./utils.js";
-import './dao/dbConfig.js';
+import MongoDbConnection from './dao/MongoDbConnection.js';
 // ? Archivos de rutas.
 import CartRouterClass from "./routes/CartRouter.class.js";
 import ProductsRouterClass from "./routes/ProductRouter.class.js";
@@ -19,6 +19,8 @@ import cookieParser from "cookie-parser";
 // ? Passport
 import passport from "passport";
 import initializePassport from "./config/passport.config.js";
+
+MongoDbConnection.getConnection();
 
 const app = express();
 
