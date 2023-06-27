@@ -1,8 +1,5 @@
 import { productServices, cartServices } from "../services/ServicesManager.js";
 
-productServices
-cartServices
-
 export const loginView = async (request, response) => {
   response.render("user/login", {
     title: "Login",
